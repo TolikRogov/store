@@ -3,5 +3,8 @@ import cv2 as cv
 img = cv.imread('apple_watch.jpg')
 img2 = cv.resize(img, [200, 300])
 cv.imshow("window", img2)
-cv.waitKey()
+while True:
+    if cv.waitKey() == ord('q'):
+        break
+        
 cv.destroyAllWindows()
